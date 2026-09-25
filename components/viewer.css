@@ -1,0 +1,438 @@
+.viewer {
+  min-height: 100dvh;
+  background: var(--paper);
+  color: var(--ink);
+}
+.viewer button {
+  cursor: pointer;
+}
+.viewer-header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 32px;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: var(--paper);
+  z-index: 10;
+}
+.viewer-header > a {
+  text-decoration: none;
+  font-size: 17px;
+  color: var(--ink);
+}
+.viewer-header nav {
+  display: flex;
+  gap: 6px;
+}
+.viewer-header nav button {
+  border: 0;
+  background: none;
+  padding: 9px 13px;
+  border-radius: 7px;
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 11px;
+}
+.viewer-header nav button[aria-current] {
+  background: #f4f4f4;
+  color: var(--ink);
+}
+.viewer-account {
+  margin-left: auto;
+  position: relative;
+}
+.viewer-account .account-card {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 12px;
+}
+.viewer-account .account-card > div {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  background: white;
+  border: 1px solid var(--line);
+  padding: 18px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px #0000000b;
+}
+.viewer-account .account-card:has(> strong),
+.viewer-account .account-card:has(.device-code) {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  background: white;
+  border: 1px solid var(--line);
+  padding: 18px;
+  width: 280px;
+  border-radius: 10px;
+}
+.viewer-chat-toggle,
+.viewer-chat header button {
+  display: grid;
+  place-items: center;
+  background: none;
+  border: 0;
+  color: var(--muted);
+  padding: 7px;
+  border-radius: 6px;
+}
+.viewer-main {
+  max-width: 1120px;
+  margin: auto;
+  padding: 52px 40px 80px;
+}
+.viewer-chat-open .viewer-main {
+  margin-right: 340px;
+}
+.viewer-kicker {
+  font: 10px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.viewer-main h1 {
+  font: 500 29px var(--display);
+  margin: 0 0 18px;
+}
+.viewer-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 700px;
+  margin-bottom: 36px;
+}
+.viewer-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+.view-block {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+  min-width: 0;
+}
+.view-block h2,
+.viewer-related h2 {
+  font: 500 12px var(--mono);
+  margin: 0 0 22px;
+  color: var(--muted);
+}
+.view-prose {
+  font-size: 15px;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.view-number {
+  font-size: 36px;
+  margin: 0;
+}
+.view-number small {
+  font-size: 15px;
+  color: var(--muted);
+}
+.view-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.view-items li {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding: 18px 0;
+}
+.view-items li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.view-items li:last-child {
+  padding-bottom: 0;
+}
+.view-items h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.view-items p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 6px 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.view-items a {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--ink);
+  margin-top: 5px;
+}
+.view-value {
+  font: 12px var(--mono);
+  white-space: nowrap;
+}
+.view-muted {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.viewer-related {
+  margin-top: 44px;
+}
+.viewer-related button {
+  background: none;
+  border: 1px solid var(--line);
+  padding: 12px 16px;
+  display: inline-flex;
+  gap: 20px;
+  align-items: center;
+  border-radius: 8px;
+  margin: 0 10px 10px 0;
+  font-size: 13px;
+}
+.viewer-spaces {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+}
+.viewer-spaces button {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-align: left;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.viewer-spaces h2 {
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+.viewer-spaces p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+.viewer-chat {
+  position: fixed;
+  right: 0;
+  top: 64px;
+  bottom: 0;
+  width: 340px;
+  background: white;
+  border-left: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  z-index: 9;
+}
+.viewer-chat header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.viewer-chat .wordmark {
+  font-size: 13px;
+}
+.viewer-messages {
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.viewer-messages > div {
+  margin-bottom: 24px;
+}
+.viewer-messages summary {
+  color: var(--muted);
+  cursor: pointer;
+}
+.viewer-messages p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.viewer-chat form {
+  margin: 14px;
+  display: flex;
+  align-items: flex-end;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 9px;
+}
+.viewer-chat textarea {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  resize: none;
+  background: none;
+  font: 13px var(--font);
+  padding: 5px;
+}
+.viewer-chat form button {
+  background: var(--ink);
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+}
+.viewer-chat form button:disabled {
+  opacity: 0.3;
+}
+.viewer-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+.viewer-stats section {
+  min-width: 0;
+}
+.viewer-stats h2 {
+  font: 11px var(--mono);
+  color: var(--muted);
+}
+.viewer-stats strong {
+  font-size: 18px;
+  font-weight: 500;
+}
+.viewer-stats p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.viewer-activity details {
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+.viewer-activity summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.viewer-activity summary small {
+  color: var(--muted);
+}
+.viewer-activity p {
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.viewer-error {
+  color: #a64f3b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+@media (max-width: 1000px) {
+  .viewer-chat-open .viewer-main {
+    margin-right: 0;
+  }
+  .viewer-chat {
+    box-shadow: -10px 0 40px #17171710;
+  }
+}
+@media (max-width: 650px) {
+  .viewer-header {
+    gap: 10px;
+    padding: 0 16px;
+    height: 58px;
+  }
+  .viewer-header > a {
+    font-size: 14px;
+  }
+  .viewer-header nav {
+    gap: 0;
+  }
+  .viewer-header nav button {
+    padding: 8px;
+    font-size: 10px;
+  }
+  .viewer-account .account-summary {
+    font-size: 0;
+    gap: 0;
+  }
+  .viewer-account .account-summary svg {
+    width: 15px;
+    height: 15px;
+  }
+  .viewer-main {
+    padding: 32px 20px 60px;
+  }
+  .viewer-content,
+  .viewer-spaces,
+  .viewer-stats {
+    grid-template-columns: 1fr;
+  }
+  .viewer-main h1 {
+    font-size: 24px;
+  }
+  .viewer-chat {
+    top: 58px;
+    width: min(100%, 340px);
+  }
+  .view-block {
+    padding: 20px;
+  }
+}
+
+.demo-badge {
+  font: 11px var(--mono);
+  color: var(--muted);
+  white-space: nowrap;
+}
+.demo-intro {
+  margin: 0 0 36px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.demo-intro p {
+  margin: 0 0 8px;
+}
+.demo-intro a {
+  color: var(--ink);
+}
+@media (max-width: 650px) {
+  .viewer-header .wordmark {
+    font-size: 11px;
+    max-width: 94px;
+  }
+  .demo-badge {
+    font-size: 9px;
+  }
+  .viewer-header {
+    gap: 6px;
+  }
+  .viewer-header nav button {
+    padding: 7px 5px;
+  }
+}
