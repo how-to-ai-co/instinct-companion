@@ -1,6 +1,6 @@
 # Optional private installation
 
-The default deployment is a fictional viewing demo. It does not connect visitors
+The default deployment is an empty viewing shell. It does not connect visitors
 to a shared agent. The repository also includes the companion app's backend
 source for a personal installation. This is a prototype, not a turnkey hosted
 multi-user service.
