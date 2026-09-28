@@ -1531,3 +1531,45 @@ body {
 .account-card .account-error {
   color: #a64f3b;
 }
+
+/* Typed Instinct memory views. Data changes, components stay predictable. */
+.memory-app { min-height:100dvh; color:var(--ink); background:var(--paper); }
+.memory-header { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px 32px; border-bottom:1px solid var(--line); }
+.memory-sync { font-size:12px; color:var(--muted); }
+.memory-nav { display:flex; gap:6px; overflow-x:auto; padding:12px 32px; border-bottom:1px solid var(--line); }
+.memory-nav button { padding:10px 13px; white-space:nowrap; border-radius:8px; font-size:13px; }
+.memory-nav button[aria-current=page] { background:#f1f1f1; color:#171717; }
+.memory-nav button span { margin-left:8px; font-size:11px; color:var(--muted); }
+.memory-main { max-width:1280px; margin:auto; padding:40px 32px; }
+.memory-heading { display:flex; justify-content:space-between; align-items:center; gap:24px; margin-bottom:30px; }
+.memory-heading h1 { font-family:var(--font-orbitron); font-size:28px; overflow-wrap:anywhere; }
+.memory-eyebrow,.memory-meta { color:var(--muted); font-size:11px; letter-spacing:.035em; }
+.memory-eyebrow { margin-bottom:10px; }
+.memory-search { font-size:12px; color:var(--muted); display:grid; gap:8px; min-width:240px; }
+.memory-search input { border:1px solid var(--line); border-radius:8px; padding:11px 14px; width:100%; background:white; color:var(--ink); }
+.memory-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.memory-card { border:1px solid var(--line); border-radius:12px; padding:22px; overflow-wrap:anywhere; }
+.memory-card h2 { font-size:17px; font-weight:500; margin:12px 0; }
+.memory-card p { font-size:14px; line-height:1.65; margin:10px 0; }
+.memory-text { white-space:pre-wrap; overflow-wrap:anywhere; }
+.memory-card a { font-size:13px; text-decoration:underline; text-underline-offset:3px; }
+.memory-meta { display:flex; justify-content:space-between; gap:8px; }
+.memory-list { list-style:none; padding:0; margin:14px 0 0; }
+.memory-list li { display:flex; gap:10px; font-size:14px; line-height:1.6; padding:7px 0; border-top:1px solid var(--line); }
+.memory-complete { color:var(--muted); text-decoration:line-through; }
+.memory-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+.memory-tags span { font-size:11px; padding:4px 7px; border-radius:5px; background:#f5f5f5; }
+.memory-project-link { font-size:12px; margin-top:16px; text-decoration:underline; text-underline-offset:3px; }
+.memory-overdue { color:#ad4b30; }
+.memory-section { margin:0 0 32px; }
+.memory-section>h2 { font-size:15px; font-weight:500; margin-bottom:16px; }
+.memory-empty { padding:60px 0; color:var(--muted); }
+.memory-empty h2 { font-size:20px; font-weight:400; color:var(--ink); margin-bottom:12px; }
+.memory-empty p { font-size:14px; }
+.memory-error { background:#fff5eb; padding:16px; border-radius:8px; font-size:14px; margin-bottom:20px; }
+.memory-footnote { font-size:12px; color:var(--muted); margin-top:24px; }
+.memory-activity article { padding:22px 0; border-bottom:1px solid var(--line); }
+.memory-activity time,.memory-activity small { font-size:12px; color:var(--muted); }
+.memory-activity p { font-size:15px; line-height:1.65; margin:10px 0; }
+@media(max-width:950px){.memory-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:600px){.memory-header{padding:20px 16px;}.memory-header .wordmark{font-size:14px;}.memory-sync{font-size:10px;}.memory-nav{padding:10px 16px;}.memory-main{padding:28px 16px;}.memory-heading{display:block;}.memory-heading h1{font-size:23px;}.memory-search{margin-top:24px;}.memory-grid{grid-template-columns:1fr;}}

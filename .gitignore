@@ -9,3 +9,6 @@ verify/
 
 .vercel/
 .vercel
+
+supabase/.temp/
+supabase/.branches/

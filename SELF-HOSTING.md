@@ -1,3 +1,7 @@
+# Legacy Codex runtime (optional reference only)
+
+The current app uses Supabase and `/api/memory`, with no Codex connection. Follow README.md and API.md for the current installation. The older setup below is not required.
+
 # Optional private installation
 
 The default deployment is an empty viewing shell. It does not connect visitors
